@@ -1,4 +1,4 @@
-const audio = new Audio("dog-bark4.mp3");
+const audio = new Audio("dog-bark4.wav");
 var px=0;
 var d=1;
 function check_n(){
