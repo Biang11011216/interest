@@ -1,3 +1,6 @@
+const audio = new Audio("dog-bark4.mp3");
+var px=0;
+var d=1;
 function check_n(){
     var act = document.querySelector('.carousel-item.active');
     var cur = act.querySelector('video');   
@@ -37,3 +40,19 @@ window.onload=function(){
     }
     },10000)
 } 
+setInterval(() => {
+    px+=d;
+    if(px==95){
+        d=d*-1;
+        $("#imgD").css("transform","rotateY(360deg)");
+    }else if(px==0){
+        d=d*-1;
+        $("#imgD").css("transform","rotateY(180deg)");
+    }
+    $("#imgD").css("left",px+"%");
+}, 300);
+
+$("#imgD").click(function(){
+    console.log(456)
+    audio.play();
+})
